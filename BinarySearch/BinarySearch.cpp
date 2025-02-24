@@ -5,7 +5,7 @@
 using namespace std;
 
 bool binarySearch(int *arr, int target, int size);
-bool altBinarySearch(int *arr, int left, int right, int target);
+bool recursiveBinarySearch(int *arr, int left, int right, int target);
 
 int main()
 {
@@ -21,7 +21,7 @@ int main()
         arr[i] = rand() % 100 + 1;
     }
 
-    arr[0] = 77;
+    arr[0] = 66;
 
     sort(arr, arr + size);
 
@@ -32,7 +32,7 @@ int main()
     }
     cout << endl;
 
-    cout << (altBinarySearch(arr, 0, size - 1, 77) ? "yes" : "no");
+    cout << (recursiveBinarySearch(arr, 0, size - 1, 66) ? "yes" : "no");
 
     return 0;
 }
@@ -57,7 +57,7 @@ bool binarySearch(int *arr, int target, int size)
 
 // uses more space,  Space Complexity: O(log n)
 // this is because it has to give the return value to the previous call of recursive function
-bool altBinarySearch(int *arr, int left, int right, int target)
+bool recursiveBinarySearch(int *arr, int left, int right, int target)
 {
     if (left > right)
     {
@@ -70,8 +70,8 @@ bool altBinarySearch(int *arr, int left, int right, int target)
         return true; // Found target
     else if (arr[mid] > target)
     {
-        return altBinarySearch(arr, left, mid - 1, target);
+        return recursiveBinarySearch(arr, left, mid - 1, target);
     }
     else
-        return altBinarySearch(arr, mid + 1, right, target);
+        return recursiveBinarySearch(arr, mid + 1, right, target);
 }

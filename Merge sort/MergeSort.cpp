@@ -1,88 +1,71 @@
 #include <iostream>
-
 using namespace std;
 
-void printArray(int arr[], int size)
+void merge(int *arr, int *leftArr, int *rightArr, int leftSize, int rightSize)
 {
-    for (int i = 0; i < size; i++)
+    int i = 0, l = 0, r = 0;
+
+    while (r < rightSize && l < leftSize)
     {
-        cout << arr[i] << " ";
+        leftArr[l] < rightArr[r] ? arr[i++] = leftArr[l++] : arr[i++] = rightArr[r++];
     }
-    cout << endl;
+    while (l < leftSize)
+    {
+        arr[i++] = leftArr[l++];
+    }
+    while (r < rightSize)
+    {
+        arr[i++] = rightArr[r++];
+    }
 }
 
-void merge(int arr[], int left, int mid, int right)
+void mergeSort(int *arr, int size)
 {
-    int leftSize = mid - left + 1;
-    int rightSize = right - mid;
+    if (size < 2)
+        return;
+
+    int leftSize = size / 2;
+    int rightSize = size - size / 2;
 
     int *leftArr = new int[leftSize];
     int *rightArr = new int[rightSize];
 
-    for (int i = 0; i < leftSize; i++)
-        leftArr[i] = arr[left + i];
-    for (int i = 0; i < rightSize; i++)
-        rightArr[i] = arr[mid + 1 + i];
-
-    int i = 0, j = 0, k = left;
-    while (i < leftSize && j < rightSize)
+    for (size_t i = 0; i < leftSize; i++)
     {
-        if (leftArr[i] <= rightArr[j])
-        {
-            arr[k] = leftArr[i];
-            i++;
-        }
-        else
-        {
-            arr[k] = rightArr[j];
-            j++;
-        }
-        k++;
+        leftArr[i] = arr[i];
+    }
+    for (size_t i = 0; i < rightSize; i++)
+    {
+        rightArr[i] = arr[leftSize + i];
     }
 
-    while (i < leftSize)
-    {
-        arr[k] = leftArr[i];
-        i++;
-        k++;
-    }
-
-    while (j < rightSize)
-    {
-        arr[k] = rightArr[j];
-        j++;
-        k++;
-    }
+    mergeSort(leftArr, leftSize);
+    mergeSort(rightArr, rightSize);
+    merge(arr, leftArr, rightArr, leftSize, rightSize);
 
     delete[] leftArr;
     delete[] rightArr;
 }
 
-void mergeSort(int arr[], int left, int right)
-{
-    if (left < right)
-    {
-        int mid = left + (right - left) / 2;
-
-        mergeSort(arr, left, mid);
-        mergeSort(arr, mid + 1, right);
-
-        merge(arr, left, mid, right);
-    }
-}
-
 int main()
 {
-    int arr[] = {12, 11, 13, 5, 6, 7};
+    int arr[] = {12, 53, 52, 1254, 25, 55, 1, 2, 4};
     int size = sizeof(arr) / sizeof(arr[0]);
 
-    cout << "Given array: ";
-    printArray(arr, size);
+    for (int k : arr)
+    {
+        cout << k << ", ";
+    }
 
-    mergeSort(arr, 0, size - 1);
+    cout << endl
+         << endl;
 
-    cout << "Sorted array: ";
-    printArray(arr, size);
+    mergeSort(arr, size);
+
+    for (int k : arr)
+    {
+        cout << k << ", ";
+    }
 
     return 0;
 }

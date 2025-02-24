@@ -26,6 +26,8 @@ public class LinkedListQueue {
 
         queue.printQueue();
 
+        System.out.println(queue.getNodeByIndex(3).toString());
+
     }
 }
 
@@ -156,6 +158,16 @@ class LinkedQueue<T> {
 
     }
 
+    public Node getNodeByIndex(int index) {
+        if (index == 0)
+            return front;
+        Node current = front;
+        for (int i = 0; i < index; i++) {
+            current = current.next;
+        }
+        return current;
+    }
+
     public void remove(int index) {
         if (isEmpty()) {
             throw new IllegalStateException("Queue is empty");
@@ -178,14 +190,13 @@ class LinkedQueue<T> {
                 current = current.next;
             }
 
-            
             current.next = current.next.next;
-            
+
             // Handle case where we're removing the last element
             if (index == size - 1) {
                 back = current;
             }
-            
+
             size--;
         }
     }

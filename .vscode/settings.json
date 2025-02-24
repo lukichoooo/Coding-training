@@ -51,7 +51,16 @@
         "xlocnum": "cpp",
         "xloctime": "cpp",
         "xmemory": "cpp",
-        "xtr1common": "cpp"
+        "xtr1common": "cpp",
+        "deque": "cpp",
+        "stack": "cpp",
+        "unordered_set": "cpp",
+        "list": "cpp",
+        "xhash": "cpp",
+        "numeric": "cpp",
+        "sort and search": "cpp",
+        "bitset": "cpp",
+        "string": "cpp"
     },
     "C_Cpp.errorSquiggles": "enabled",
     "CodeGPT.apiKey": "LM Studio"

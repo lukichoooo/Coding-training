@@ -4,6 +4,28 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        
+        {
+            "type": "java",
+            "name": "QuickSort",
+            "request": "launch",
+            "mainClass": "QuickSort",
+            "projectName": "CODING_1cd4b3aa"
+        },
+        {
+            "type": "java",
+            "name": "IterativeMergeSort",
+            "request": "launch",
+            "mainClass": "IterativeMergeSort",
+            "projectName": "CODING_1cd4b3aa"
+        },
+        {
+            "type": "java",
+            "name": "LinkedListQueueMergeSort",
+            "request": "launch",
+            "mainClass": "LinkedListQueueMergeSort",
+            "projectName": "CODING_1cd4b3aa"
+        },
         {
             "type": "java",
             "name": "LinkedListQueue",
