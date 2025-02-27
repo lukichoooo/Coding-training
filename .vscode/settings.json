@@ -1,19 +1,30 @@
 {
+    "asm.showStopIconInEditorTitleMenu": false,
+    "asm.executablePath": "C:\\Users\\khund\\OneDrive\\Desktop\\prgtraminnnn\\Assembly\\asm_tools",
+    "[java]": {
+        "editor.defaultFormatter": "redhat.java"
+    },
+    "explorer.confirmDelete": false,
+    "python.defaultInterpreterPath": "C:\\msys64\\ucrt64\\bin\\python3.11.exe",
+    "workbench.editorAssociations": {
+        "*.copilotmd": "vscode.markdown.preview.editor",
+        "*.fxml": "default"
+    },
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-23",
+            "path": "C:\\Program Files\\Java\\jdk-23"
+        }
+    ],
+    "java.jdt.ls.java.home": "C:\\Program Files\\Java\\jdk-23",
     "files.associations": {
         "minPositive_maxNegative": "javascript",
-        "iostream": "cpp",
-        "ctime": "cpp",
+        "stack": "cpp",
         "xutility": "cpp",
-        "ios": "cpp",
-        "xiosbase": "cpp",
-        "initializer_list": "cpp",
-        "utility": "cpp",
-        "xstring": "cpp",
-        "ostream": "cpp",
-        "vector": "cpp",
         "algorithm": "cpp",
         "atomic": "cpp",
         "bit": "cpp",
+        "bitset": "cpp",
         "cctype": "cpp",
         "charconv": "cpp",
         "clocale": "cpp",
@@ -25,24 +36,39 @@
         "cstdio": "cpp",
         "cstdlib": "cpp",
         "cstring": "cpp",
+        "ctime": "cpp",
         "cwchar": "cpp",
+        "deque": "cpp",
         "exception": "cpp",
         "format": "cpp",
+        "initializer_list": "cpp",
+        "ios": "cpp",
         "iosfwd": "cpp",
+        "iostream": "cpp",
         "istream": "cpp",
         "iterator": "cpp",
         "limits": "cpp",
+        "list": "cpp",
         "locale": "cpp",
         "memory": "cpp",
         "new": "cpp",
+        "numeric": "cpp",
         "optional": "cpp",
+        "ostream": "cpp",
+        "random": "cpp",
         "stdexcept": "cpp",
         "streambuf": "cpp",
+        "string": "cpp",
         "system_error": "cpp",
         "tuple": "cpp",
         "type_traits": "cpp",
         "typeinfo": "cpp",
+        "unordered_set": "cpp",
+        "utility": "cpp",
+        "vector": "cpp",
         "xfacet": "cpp",
+        "xhash": "cpp",
+        "xiosbase": "cpp",
         "xlocale": "cpp",
         "xlocbuf": "cpp",
         "xlocinfo": "cpp",
@@ -51,17 +77,69 @@
         "xlocnum": "cpp",
         "xloctime": "cpp",
         "xmemory": "cpp",
-        "xtr1common": "cpp",
-        "deque": "cpp",
-        "stack": "cpp",
-        "unordered_set": "cpp",
-        "list": "cpp",
-        "xhash": "cpp",
-        "numeric": "cpp",
-        "sort and search": "cpp",
-        "bitset": "cpp",
-        "string": "cpp"
+        "xstring": "cpp",
+        "xtr1common": "cpp"
     },
-    "C_Cpp.errorSquiggles": "enabled",
+    "debug.javascript.autoAttachFilter": "smart",
+    "debug.javascript.debugByLinkOptions": "on",
+    "debug.javascript.defaultRuntimeExecutable": {
+        "pwa-msedge": "",
+        "pwa-node": "node"
+    },
+    "debug.javascript.unmapMissingSources": true,
+    "markdown.validate.enabled": true,
+    "peacock.favoriteColors": [
+        {
+            "name": "Angular Red",
+            "value": "#dd0531"
+        },
+        {
+            "name": "Azure Blue",
+            "value": "#007fff"
+        },
+        {
+            "name": "JavaScript Yellow",
+            "value": "#f9e64f"
+        },
+        {
+            "name": "Mandalorian Blue",
+            "value": "#1857a4"
+        },
+        {
+            "name": "Node Green",
+            "value": "#215732"
+        },
+        {
+            "name": "React Blue",
+            "value": "#61dafb"
+        },
+        {
+            "name": "Something Different",
+            "value": "#832561"
+        },
+        {
+            "name": "Svelte Orange",
+            "value": "#ff3d00"
+        },
+        {
+            "name": "Vue Green",
+            "value": "#42b883"
+        }
+    ],
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "continue.enableTabAutocomplete": false,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "C_Cpp.autocompleteAddParentheses": true,
+    "github.copilot.editor.enableAutoCompletions": false,
+    "importCost.javascriptExtensions": [
+        "\\.jsx?$"
+    ],
     "CodeGPT.apiKey": "LM Studio"
 }

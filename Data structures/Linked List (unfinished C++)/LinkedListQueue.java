@@ -1,4 +1,5 @@
 
+
 public class LinkedListQueue {
     public static void main(String[] args) {
 
@@ -28,6 +29,8 @@ public class LinkedListQueue {
 
         System.out.println(queue.getNodeByIndex(3).toString());
 
+
+        queue.printQueue();
     }
 }
 

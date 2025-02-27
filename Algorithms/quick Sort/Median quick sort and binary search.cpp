@@ -26,7 +26,6 @@ size_t partition(int *arr, size_t l, size_t r)
         if (i < j)
         {
             swap(arr[j], arr[i]);
-            i++;
         }
     }
     swap(arr[r], arr[j]);
@@ -58,6 +57,9 @@ int binarySearch(int *arr, int target, size_t l, size_t r)
 int search(int *arr, int target, size_t size)
 {
     quickSort(arr, 0, size - 1);
+
+    printArray(arr,size);   // check sorted array
+
     printArray(arr,size);
     return binarySearch(arr, target, 0, size);
 }
